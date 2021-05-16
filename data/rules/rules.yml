@@ -2,6 +2,132 @@ version: "2.0"
 
 rules:
 
+#- rule: query knowledge base
+#  steps:
+#  - intent: query_knowledge_base
+#  - action: action_query_knowledge_base
+ 
+
+- rule: Answer about Queen Victoria's portrait 
+  steps:
+  - intent: queen_victoria
+  - action: utter_portrait
+
+- rule: Answer about peanuts
+  steps:
+  - intent: peanuts
+  - action: utter_peanuts
+
+- rule: Answer about karaoke
+  steps:
+  - intent: karaoke
+  - action: utter_karaoke    
+
+- rule: Answer about Formula One
+  steps:
+  - intent: formula
+  - action: utter_formula
+
+- rule: Answer about Copernicus
+  steps:
+  - intent: copernicus
+  - action: utter_copernicus
+
+- rule: Answer about tower
+  steps:
+  - intent: chicago_tower
+  - action: utter_tower 
+
+- rule: Answer about London
+  steps:
+  - intent: london
+  - action: utter_london
+
+- rule: Answer about Bell
+  steps:
+  - intent: first_call
+  - action: utter_call
+
+- rule: Answer about harp
+  steps:
+  - intent: harp
+  - action: utter_harp
+
+- rule: Answer about Transformers
+  steps:
+  - intent: transformers
+  - action: utter_transformers
+
+- rule: Answer about elephant
+  steps:
+  - intent: elephant
+  - action: utter_elephant 
+
+- rule: Answer about Blade Runner
+  steps:
+  - intent: runner
+  - action: utter_runner
+
+- rule: Answer about Salzburg
+  steps:
+  - intent: salzburg
+  - action: utter_salzburg
+
+- rule: Answer about Southern Cross
+  steps:
+  - intent: southern_cross
+  - action: utter_southern_cross
+
+- rule: Answer about strawberry
+  steps:
+  - intent: strawberry
+  - action: utter_strawberry
+
+- rule: Answer about Zoroastrianism
+  steps:
+  - intent: zoroastrianism
+  - action: utter_zoroastrianism
+
+- rule: Answer about giraffe
+  steps:
+  - intent: giraffe
+  - action: utter_giraffe
+
+- rule: Answer about Lewis Carroll
+  steps:
+  - intent: carroll
+  - action: utter_carroll
+
+- rule: Answer about caffeine
+  steps:
+  - intent: caffeine
+  - action: utter_caffeine 
+
+- rule: Answer about Go
+  steps:
+  - intent: go_game
+  - action: utter_go
+
+- rule: Answer about Beowulf
+  steps:
+  - intent: beowulf
+  - action: utter_beowulf
+
+- rule: Answer about sextant
+  steps:
+  - intent: sextant
+  - action: utter_sextant
+
+- rule: Answer about North Star
+  steps:
+  - intent: north_star
+  - action: utter_north_star
+
+- rule: Answer about Souvenir
+  steps:
+  - intent: souvenir
+  - action: utter_souvenir                           
+
 - rule: Confirm that the bot is not a human
   steps:
   - intent: check_human
@@ -38,82 +164,4 @@ rules:
   - intent: thankyou
   - action: utter_noworries
   
-- rule: is there a transfer charge
-  steps:
-  - intent: ask_transfer_charge
-  - action: action_show_transfer_charge
-  
-- rule: Show list of known recipients
-  steps:
-  - intent: check_recipients
-  - action: action_show_recipients
-  
-- rule: Show balance (bank account or credit card, based on account_type)
-  steps:
-  - intent: check_balance
-  - action: action_show_balance
-        
-- rule: Activate cc_payment_form when no other form is active
-  condition:
-  # this condition allows stories to handle form switching
-  - active_loop: null
-  steps:
-  - intent: pay_cc
-  - action: cc_payment_form
-  - active_loop: cc_payment_form
-  
-- rule: Activate transfer_money_form when no other form is active
-  condition:
-  # this condition allows stories to handle form switching
-  - active_loop: null
-  steps:
-  - intent: transfer_money
-  - action: transfer_money_form
-  - active_loop: transfer_money_form
-  
-- rule: Activate transaction_search_form when no other form is active
-  condition:
-  # this condition allows stories to handle form switching
-  - active_loop: null
-  steps:
-  - or:
-    - intent: search_transactions
-    - intent: check_earnings
-  - action: transaction_search_form
-  - active_loop: transaction_search_form
-  
-- rule: Submit cc_payment_form while not switched from previous form
-  condition:
-  - active_loop: cc_payment_form
-  - slot_was_set:
-    - previous_form_name: null
-  steps:
-  - action: cc_payment_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_pay_cc
-  
-- rule: Submit transfer_money_form while not switched from previous form
-  condition:
-  - active_loop: transfer_money_form
-  - slot_was_set:
-    - previous_form_name: null
-  steps:
-  - action: transfer_money_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_transfer_money
-  
-- rule: Submit transaction_search_form while not switched from previous form
-  condition:
-  - active_loop: transaction_search_form
-  - slot_was_set:
-    - previous_form_name: null
-  steps:
-  - action: transaction_search_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_transaction_search
+

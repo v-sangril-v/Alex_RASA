@@ -2,27 +2,44 @@ session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: true
 intents:
+- queen_victoria
+- peanuts
+- karaoke
+- formula
+- copernicus
+- chicago_tower
+- london
+- first_call
+- harp
+- transformers
+- elephant
+- runner
+- salzburg
+- southern_cross
+- strawberry
+- zoroastrianism
+- giraffe
+- carroll
+- caffeine
+- go_game
+- beowulf
+- sextant
+- north_star
+- souvenir 
 - check_human
-- transfer_money:
-    use_entities: []
+#- query_knowledge_base
 - inform
-- pay_cc:
-    use_entities: []
+
 - greet
 - goodbye
 - affirm
 - deny
 - thankyou
-- ask_transfer_charge
-- search_transactions:
-    use_entities: []
-- check_balance:
-    use_entities:
-    - credit_card
-    - account_type
-- check_earnings:
-    use_entities: []
-- check_recipients
+
+
+
+
+
 - out_of_scope
 - session_start
 - restart
@@ -32,6 +49,15 @@ intents:
 - help
 - nlu_fallback
 entities:
+#- object_type
+#- person
+#- object
+#- attribute
+#- anchor
+#- achievement
+#- fact
+#- name
+
 - amount-of-money
 - credit_card
 - payment_date
@@ -43,6 +69,32 @@ entities:
 - handoff_to
 - search_type
 slots:
+  
+  #object_type:
+  #  type: text
+  #  influence_conversation: false
+  #person:
+  #  type: text
+  #  influence_conversation: false
+  #object:
+  #  type: text
+  #  influence_conversation: false
+  #attribute:
+  #  type: text
+  #  influence_conversation: false
+  #anchor:
+  #  type: text
+  #  influence_conversation: false
+  #achievement:
+  #  type: text
+  #  influence_conversation: false
+  #fact:
+  #  type: text
+  #  influence_conversation: false
+  #name:
+  #  type: text
+  #  influence_conversation: false
+        
   AA_CONTINUE_FORM:
     type: any
     influence_conversation: false
@@ -119,8 +171,56 @@ slots:
     type: any
     influence_conversation: false
 responses:
+  utter_portrait:
+  - text: The answer is "Queen Victoria"!
+  utter_peanuts:
+  - text: The answer is "Peanuts"!
+  utter_karaoke:
+  - text: The answer is "Karaoke"!
+  utter_formula:
+  - text: The answer is "Formula One"!
+  utter_copernicus:
+  - text: The answer is "Nicholas Copernicus"!
+  utter_tower:
+  - text: The answer is "Sears Tower"!
+  utter_london:
+  - text: The answer is "London"!
+  utter_call:
+  - text: The answer is "Alexander Graham Bell"!
+  utter_harp:
+  - text: The answer is "Harp"!
+  utter_transformers:
+  - text: The answer is "Transformers"!
+  utter_elephant:
+  - text: The answer is "The tip of the tail"!
+  utter_runner:
+  - text: The answer is "Blade Runner"!
+  utter_salzburg:
+  - text: The answer is "Salzburg"!
+  utter_southern_cross:
+  - text: The answer is "The Southern Cross"!
+  utter_strawberry:
+  - text: The answer is "The rose"!
+  utter_zoroastrianism:
+  - text: The answer is "Zoroastrianism"!
+  utter_giraffe:
+  - text: The answer is "The giraffe"!
+  utter_carroll:
+  - text: The answer is "Lewis Carroll"!
+  utter_caffeine:
+  - text: The answer is "Caffeine"!
+  utter_go:
+  - text: The answer is "Go"!
+  utter_beowulf:
+  - text: The answer is "Grendel"!
+  utter_sextant:
+  - text: The answer is "Sextant"!
+  utter_north_star:
+  - text: The answer is "The North Star"!
+  utter_souvenir:
+  - text: The answer is "Souvenir"!
   utter_out_of_scope:
-  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
+  - text: Sorry, I'm not sure how to respond to that. 
   utter_ask_transfer_money_form_amount-of-money:
   - text: How much money do you want to transfer?
   utter_ask_transfer_money_form_PERSON:
@@ -175,13 +275,13 @@ responses:
   utter_found_deposit_transactions:
   - text: I found {numtransacts} deposits made to your account totalling {currency}{total}
   utter_ask_rephrase:
-  - text: I didn't quite understand that. Can you rephrase?
+  - text: I didn't get that. Can you please rephrase in a simpler way?
   utter_ok:
   - text: 👍
   utter_ask_continue:
   - text: Would you like to continue?
   utter_default:
-  - text: I didn't quite understand that. Could you rephrase?
+  - text: I didn't get that. Can you please rephrase it in a simpler way?
   utter_ask_cc_payment_form_AA_CONTINUE_FORM:
   - buttons:
     - payload: /affirm
@@ -242,7 +342,7 @@ responses:
   utter_recipients:
   - text: These are your known recpients to whom you can send money:{formatted_recipients}
   utter_greet:
-  - text: Hi! I'm your Financial Assistant!
+  - text: Hello! My name is Alex, I am your virtual assistant. 
   utter_ask_handoff:
   - text: It looks like you want to be transferred to a human agent.
   utter_handoff:
@@ -256,28 +356,16 @@ responses:
   utter_bot:
   - text: I'm a virtual assistant made with Rasa. 
   utter_help:
-  - text: "I can help you with your financial accounts. \nYou can ask me things like:\
-      \ \n- What's my account balance? \n- Pay off my credit card \n- What did I spend\
-      \ at Target last month? \n- I need to transfer money"
+  - text: I understand what you are saying by predicting the intent of your message. Please, ask your questions one by one, and try to use simple phrases containing the main words. If I can’t understand you, I will try to clarify what you mean or ask to rephrase in a more simple way.
 actions:
 - action_session_start
 - action_restart
-- action_show_balance
-- action_show_recipients
-- action_show_transfer_charge
+#- action_query_knowledge_base
 - action_handoff
 - action_handoff_options
-- action_pay_cc
-- action_transfer_money
-- action_transaction_search
+
 - action_ask_transaction_search_form_zz_confirm_form
-- action_switch_forms_ask
-- action_switch_forms_deny
-- action_switch_forms_affirm
-- action_switch_back_ask
-- validate_cc_payment_form
-- validate_transfer_money_form
-- validate_transaction_search_form
+
 forms:
   cc_payment_form:
     AA_CONTINUE_FORM:
