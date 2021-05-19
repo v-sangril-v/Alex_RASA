@@ -271,7 +271,7 @@ responses:
   utter_found_deposit_transactions:
   - text: I found {numtransacts} deposits made to your account totalling {currency}{total}
   utter_ask_rephrase:
-  - text: I didn't get that. Can you please try to rephrase it?
+  - text: Sorry, I didn't get that. 
   utter_name:
   - text: It is Alex :)
   utter_ok:
@@ -279,7 +279,7 @@ responses:
   utter_ask_continue:
   - text: Would you like to continue?
   utter_default:
-  - text: I didn't get that. Can you please try to rephrase it?
+  - text: Sorry, I didn't get that. 
   utter_ask_cc_payment_form_AA_CONTINUE_FORM:
   - buttons:
     - payload: /affirm
@@ -340,7 +340,7 @@ responses:
   utter_recipients:
   - text: These are your known recpients to whom you can send money:{formatted_recipients}
   utter_greet:
-  - text: Hello! My name is Alex, I am your virtual assistant. 
+  - text: Hello! I am your virtual assistant. 
   utter_ask_handoff:
   - text: It looks like you want to be transferred to a human agent.
   utter_handoff:
@@ -354,7 +354,7 @@ responses:
   utter_bot:
   - text: I'm a virtual assistant powered by Rasa. 
   utter_help:
-  - text: I can help you with the quiz. I predict the intent of your message based on data I learned. Please, ask your questions one by one, and try to use simple phrases with the main words. If I can’t understand you, I will ask to rephrase the question. If I cannot answer it several times, maybe it is better to move forward. But I will do my best :) 
+  - text: I can help you with the quiz.  
 actions:
 - action_session_start
 - action_restart
