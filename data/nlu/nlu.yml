@@ -10,136 +10,129 @@ nlu:
 #    - who is the author of [Concerning the Revolutions of the Celestial Spheres]{"entity": "attribute", "value": "achievement"}?
 #    - what is another [name]{"entity": "attribute", "value": "anchor"} of [Grand Prix]{"entity": "attribute", "value": "anchor"}?
 #    - how is [Grand Prix]{"entity": "attribute", "value": "anchor"} called differently?
-      
+- intent: name
+  examples: |
+    - what is your name?
+    - how can I call you? :) 
+    - what's you name? :) 
+- intent: quiz
+  examples: |
+    - I need your help with quiz
+    - Will you help me with quiz?
+    - can you help to pass quiz?
+    - we have quiz to pass :)
+    - let's make a quiz?   
 - intent: queen_victoria
   examples: |
-    - what portrait did John Lavery create in 1888?
-    - whose portrait did John Lavery paint in 1888?
-    
-
+    - what portrait John Lavery create in 1888?
+    - whose portrait John Lavery paint in 1888?
 - intent: peanuts
   examples: |
-    - what is the most dangerous allergy?
-    - allergie to what is the most common life-threating case?
-    - what causes the most common life-threating allergy?     
-
+    - what is most dangerous allergy?
+    - allergie to what is most common life-threating case?
+    - what causes most common life-threating allergy?
+- intent: mayo_false
+  examples: |
+    - where is Mayo Clinic located?
+    - where in USA you can find Mayo Clinic?
 - intent: karaoke
   examples: |
     - what did invent Daisuke Inoue?
     - for what invention did Daisuke Inoue get a prize?
-  
 - intent: formula
   examples: |
     - what is another name of Grand Prix racing?
     - how is Grand Prix racing called differently?
-
 - intent: copernicus
   examples: |
-    - who was an author of the book "Concerning the Revolutions of the Celestial Spheres"?
-    - whose book did start an astronomical revolution?
+    - who was author of book "Concerning the Revolutions of the Celestial Spheres"?
+    - whose book did start astronomical revolution?
     - who wrote the book "Concerning the Revolutions of the Celestial Spheres"?
-
 - intent: chicago_tower
   examples: |
-    - what 110-story Chicago tower is stroken by a lightning hundreds of times a year?
-    - which tower in Chicago does lightning strike hundreds of times a year?
-    - what is the name of a Chicago tower often stroken by a lightning?   
-
+    - what Chicago tower is stroken by lightning?
+    - which tower lightning strike hundreds of times a year?
+    - how called Chicago tower often stroken by lightning?   
 - intent: london
   examples: |
-    - what capital does get most of its drinking water from the Thames River?
-    - drinking water of which capital is coming mostly from the Thames River?
-
+    - what capital get drinking water from the Thames River?
+    - drinking water of which capital is coming from the Thames River?
 - intent: first_call
   examples: |
-    - who made the first transcontinental phone call?
-    - who was the man who made the first transcontinental phone call?
-
+    - who made first transcontinental phone call?
+    - which man made first phone call?
+    - who made the first call in 1915?
 - intent: harp
   examples: |
-    - what orchestral instrument is the first one heard in Stravinsky's "Orpheus"?
-    - what is the orchestral instrument that heard the first one in Stravinsky's "Orpheus"?        
-
+    - what orchestral instrument is first one heard in Orpheus?
+    - what is the orchestral instrument we can hear in Stravinsky's "Orpheus"?        
 - intent: transformers
   examples: |
-    - in what movie do Autobots & the Decepticons have war?
-    - in what sci-fi flick do Autobots & the Decepticons duel?
-    - in what sci-fi movie do Autobots & the Decepticons bring their war on Earth?
-
+    - in what movie Autobots & the Decepticons have war?
+    - in what sci-fi movie Autobots & the Decepticons duel?
 - intent: elephant
   examples: |
-    - where does an elephant have the longest & thickest hair?
+    - where elephant have longest & thickest hair?
     - the longest & thickest hair can be found on elephant's eyelashes and here  
-    - where else an adult elephant has the longest & thickest hair beside eyelashes?
-
+    - where else adult elephant has longest & thickest hair beside eyelashes?
 - intent: runner
   examples: |
-    - what movie with Harrison Ford was inspired by Philip K. Dick's book?
-    - what movie did the book "Do Androids Dream of Electric Sheep?" inspire?
+    - what movie with Harrison Ford based on Philip K. Dick's book?
+    - what movie book "Do Androids Dream of Electric Sheep?" inspire?
     - In what movie by the book "Do Androids Dream of Electric Sheep?" did Harrison Ford star?
-
 - intent: salzburg
   examples: |
-    - In which city you can find the graves of Mozart's wife & father?
-    - where are the graves of Mozart's wife & father located?
-
+    - In which city you can find graves of Mozart's wife & father?
+    - where are graves of Mozart's wife & father located?
+    - where is grave of Mozart's wife?
 - intent: southern_cross
   examples: |
-    - which constellation is featured on the flags of 5 of the world's countries?
-    - which stars are featured on the flags of 5 of the world's countries?
-
+    - what stars on flags of 5 world's countries?
+    - which stars featured on flags of 5 countries?
 - intent: strawberry
   examples: |
-    - to which garden flower family does strawberry belong?
+    - to which garden flower family trawberry belong?
     - if strawberry is not a berry, then what it is?
     - strawberry is a member of which garden flower family?
-
 - intent: zoroastrianism
   examples: |
     - what religion was founded by & named for a Persian prophet?
     - what religion was named after a Persian prophet?
-
 - intent: giraffe
   examples: |
-    - which animal has the highest blood pressure?
-    - blood pressure of which animal is the highest? 
-
+    - which animal has highest blood pressure?
+    - how is called animal with highest blood pressure?
+    - blood pressure of which animal most high in the world?
 - intent: carroll
   examples: |
     - who did write the book "Examples in Arithmetic"?
     - what author wrote not only children books, but books about math as well?
-
 - intent: caffeine
   examples: |
-    - 100-164 mg of which chemical can be found in a cup of coffee?
-    - 100-164 mg of what does a cup of coffee contain? 
-    - 8-36 mg of this in a cup of green tea
-
+    - 100-164 mg of what cup of coffee contain? 
+    - 8-36 mg of this in cup of green tea    
 - intent: go_game
   examples: |
     - what Japanese board game is over 3,000 years old?
-    - in which Japanese board game do your capture territory? 
-
+    - in which Japanese board game you capture territory? 
 - intent: beowulf
   examples: |
-    - which monster did Beowulf kill?
-    - what was the name of the monster killed by Beowulf?
-
+    - which monster was killed by Beowulf?
+    - what monster killed Beowulf?
+    - what is the name of monster killed by Beowulf?
 - intent: sextant
   examples: |
     - which navigational instrument was invented around 1730?
-    - how is the navigational instrument invented around 1730 by John Hadley called?
-
+    - how called navigational instrument invented 1730?
 - intent: north_star
   examples: |
     - which star is also called Alpha Ursae Minoris?
+    - what is another name of Alpha Ursae Minoris?
     - in the nothern hemisphere latitude is measured relative to this star    
-
 - intent: souvenir
   examples: |
-    - how a reminder of a place you visited is called?
-    - a memento that you might buy    
-
+    - how is called reminder about visited place?
+    - a reminder of visited place you buy    
 - intent: check_human
   examples: |
     - are you a bot?
@@ -197,7 +190,6 @@ nlu:
     - Yes please
     - Yes please!
     - Yes, I accept
-
 - intent: deny
   examples: |
     - not really
@@ -281,13 +273,6 @@ nlu:
     - good day
 - intent: inform
   examples: |
-    - $10
-    - 5000
-    - 500
-    - $100
-    - $500
-    - 100 dollars
-    - 1000 dollars
     - tomorrow
     - next week
     - yesterday
@@ -370,12 +355,6 @@ nlu:
     - to my [sister](PERSON)
     - my [dad](PERSON)
     - William Baker
-    - Evan Oslo
-    - Lisa Macintyre
-    - Karen Lancaster
-    - Percy Donald
-    - Kyle Gardner
-    - Katy Parrow
     - Percy please
     - Laura Schilling
     - In that case, let's go with Percy
@@ -383,7 +362,6 @@ nlu:
     - Jane
     - Melinda
     - Sara
-    - my wife's
     - Andreas
     - htthis weekend
     - all of them
@@ -392,7 +370,6 @@ nlu:
     - percy donald
     - danIelle smilanich
     - [Gringtos](credit_card)
-
 - intent: thankyou
   examples: |
     - thank you goodbye
@@ -422,26 +399,19 @@ nlu:
     - thx
     - thanks for your information
     - thanks f
-
 - intent: help
   examples: |
     - help
     - what can you do?
     - what can I ask you?
-    
     - what can you help me with?
     - help me
     - help, what do you do
-    
     - how can you help me
-    
     - can you help me?
-    
-    
     - help
     - help me
     - help please
-    
     - help?
     - hep me
 - intent: human_handoff
@@ -473,17 +443,13 @@ nlu:
     - i want to talk to a real person
 - intent: out_of_scope
   examples: |
-  
     - I want to know the weather
-
     - Fridge Isn't Running
     - my tv isn't working
     - I want a pizza
     - my washing machine isn't working
-
     - order a pizza
     - I want to order a pizza
-    
     - tell me a joke
     - Can I get a hamburger?
     - Can YouTube talk?

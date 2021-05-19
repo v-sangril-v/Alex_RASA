@@ -18,12 +18,17 @@ action_endpoint:
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/api/tracker-stores/
 
-#tracker_store:
-#    type: redis
-#    url: <host of the redis instance, e.g. localhost>
-#    port: <port of your redis instance, usually 6379>
-#    db: <number of your database within redis, e.g. 0>
-#    password: <password used for authentication>
+
+#event_broker:
+#    type: SQL
+#    dialect: "postgresql"
+ #   url: "rasadb.cw9jeev4jo7s.eu-central-1.rds.amazonaws.com"
+#    port: 5432
+#    db: "rasa"
+    #login_db: "postgres"
+#    username: "postgres"
+#    password: "kruksAnsanta11"
+
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
 #tracker_store:

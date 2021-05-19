@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz game</title>
+</head>
+<body>
+    <script>!(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+
+                customData: { language: "en" },
+                //embedded: true,
+                hideWhenNotConnected: false,
+                socketUrl: "http://localhost:5005",
+                socketPath: "/socket.io/",
+                //initPayload: "/get_started", 
+                title: "Your Virtual Assistant",
+                params:{
+                    storage: "local"
+                }, 
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+      </script>
+<h1>Welcome to our quiz</h1>
+<p>Let's do it.</p>
+
+</body>
+</html> 

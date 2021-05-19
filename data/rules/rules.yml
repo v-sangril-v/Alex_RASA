@@ -6,7 +6,15 @@ rules:
 #  steps:
 #  - intent: query_knowledge_base
 #  - action: action_query_knowledge_base
- 
+- rule: Agree to help with quiz
+  steps:
+  - intent: quiz
+  - action: utter_quiz
+  
+- rule: Tell your name
+  steps:
+  - intent: name
+  - action: utter_name 
 
 - rule: Answer about Queen Victoria's portrait 
   steps:
