@@ -31,7 +31,8 @@ pipeline:
     dimensions: ["PERSON"]
   - name: EntitySynonymMapper
 policies:
-- name: AugmentedMemoizationPolicy
+- name: MemoizationPolicy
+  max_history: 3
 - name: TEDPolicy
   epochs: 40
 - name: RulePolicy

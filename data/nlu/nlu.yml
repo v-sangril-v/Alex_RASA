@@ -48,6 +48,10 @@ nlu:
     - who was author of book "Concerning the Revolutions of the Celestial Spheres"?
     - whose book did start astronomical revolution?
     - who wrote the book "Concerning the Revolutions of the Celestial Spheres"?
+- intent: copernicus_false
+  examples: |
+    - was there a revolution in 1543?
+    - what astronomical events were in 1543?
 - intent: chicago_tower
   examples: |
     - what Chicago tower is stroken by lightning?
@@ -62,10 +66,19 @@ nlu:
     - who made first transcontinental phone call?
     - which man made first phone call?
     - who made the first call in 1915?
+- intent: first_call_false
+  examples: |
+    - what happend in NYC in 1915?
+    - what did Thomas Watson?
 - intent: harp
   examples: |
     - what orchestral instrument is first one heard in Orpheus?
-    - what is the orchestral instrument we can hear in Stravinsky's "Orpheus"?        
+    - which instrument is the first one heard?
+    - what is the orchestral instrument we can hear in Stravinsky's "Orpheus"?
+- intent: harp_false
+  examples: |
+    - which orchestral instruments exist?
+    - what did Stravinsky wrote beside "Orpheus"?            
 - intent: transformers
   examples: |
     - in what movie Autobots & the Decepticons have war?
@@ -89,6 +102,7 @@ nlu:
   examples: |
     - what stars on flags of 5 world's countries?
     - which stars featured on flags of 5 countries?
+    - which stars are on flags?
 - intent: strawberry
   examples: |
     - to which garden flower family trawberry belong?
@@ -98,6 +112,10 @@ nlu:
   examples: |
     - what religion was founded by & named for a Persian prophet?
     - what religion was named after a Persian prophet?
+- intent: zoroastrianism_false
+  examples: |
+    - where Persia's Achaemenian empire was located?
+    - was the empire in Persia powerful?    
 - intent: giraffe
   examples: |
     - which animal has highest blood pressure?

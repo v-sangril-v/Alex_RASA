@@ -10,7 +10,7 @@ rules:
   steps:
   - intent: quiz
   - action: utter_quiz
-  
+
 - rule: Tell your name
   steps:
   - intent: name
@@ -141,10 +141,7 @@ rules:
   - intent: check_human
   - action: utter_bot
   
-- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
-  steps:
-  - intent: nlu_fallback
-  - action: utter_default
+
 
 - rule: answer out of scope
   steps:

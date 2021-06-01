@@ -4,6 +4,10 @@ session_config:
 intents:
 - quiz
 - mayo_false
+- copernicus_false
+- first_call_false
+- harp_false
+- zoroastrianism_false
 - queen_victoria
 - peanuts
 - karaoke
@@ -278,6 +282,8 @@ responses:
   - text: 👍
   utter_ask_continue:
   - text: Would you like to continue?
+  utter_go_further:
+  - text: Sorry, seems that I do not know the answer. Should we go to the next one?
   utter_default:
   - text: I didn't get that. Can you please try to rephrase it?
   utter_ask_cc_payment_form_AA_CONTINUE_FORM:
