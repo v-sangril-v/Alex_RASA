@@ -1,0 +1,21 @@
+version: "3"  
+services:
+  rasa:
+    container_name: rasa_server
+    #networks: ['rasa-network']
+    build:
+      context: ./backend
+    ports:
+      - ${PORT1}:${PORT1}
+
+  action_server:
+    container_name: action_server
+    #networks: ['rasa-network']
+    build:
+      context: ./actions
+    volumes:
+    - ./actions:/app/actions
+    ports:
+      - ${PORT2}:${PORT2} 
+
+#networks: {rasa-network: {}}       
