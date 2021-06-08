@@ -22,21 +22,21 @@ action_endpoint:
 #event_broker:
     #type: SQL
     #dialect: "postgresql"
-    #url: "rasadb.cw9jeev4jo7s.eu-central-1.rds.amazonaws.com"
+    #url: ""
     #port: 5432
     #db: "rasa"
     #login_db: "postgres"
     #username: "postgres"
-    #password: "kruksAnsanta11"
+    #password: ""
 
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
 tracker_store:
     type: mongod
-    url: "mongodb+srv://sangril:kruksAnsanta11@rasadb.dfgvb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" 
+    url: "" 
     db: "rasa"
-    username: "sangril"
-    password: "kruksAnsanta11"
+    username: ""
+    password: ""
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/api/event-brokers/
